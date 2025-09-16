@@ -1,0 +1,101 @@
+Using device: cuda
+Training samples: 5216
+Validation samples: 16
+Test samples: 624
+New training samples: 4172
+New validation samples: 1044
+model.safetensors: 100%
+ 114M/114M [00:00<00:00, 370MB/s]
+Starting training...
+Epoch 1/10, Batch 0/131, Loss: 0.6893
+Epoch 1/10, Batch 50/131, Loss: 0.1826
+Epoch 1/10, Batch 100/131, Loss: 0.0158
+Epoch [1/10], Train Loss: 0.1673, Val Loss: 0.0963, Val Acc: 95.69%
+New best model saved with accuracy: 95.69%
+Epoch 2/10, Batch 0/131, Loss: 0.1430
+Epoch 2/10, Batch 50/131, Loss: 0.1469
+Epoch 2/10, Batch 100/131, Loss: 0.0580
+Epoch [2/10], Train Loss: 0.0828, Val Loss: 0.0537, Val Acc: 97.99%
+New best model saved with accuracy: 97.99%
+Epoch 3/10, Batch 0/131, Loss: 0.0188
+Epoch 3/10, Batch 50/131, Loss: 0.0162
+Epoch 3/10, Batch 100/131, Loss: 0.1733
+Epoch [3/10], Train Loss: 0.0613, Val Loss: 0.0466, Val Acc: 98.47%
+New best model saved with accuracy: 98.47%
+Epoch 4/10, Batch 0/131, Loss: 0.0685
+Epoch 4/10, Batch 50/131, Loss: 0.3020
+Epoch 4/10, Batch 100/131, Loss: 0.0624
+Epoch [4/10], Train Loss: 0.0563, Val Loss: 0.0524, Val Acc: 98.37%
+Epoch 5/10, Batch 0/131, Loss: 0.0114
+Epoch 5/10, Batch 50/131, Loss: 0.0052
+Epoch 5/10, Batch 100/131, Loss: 0.1598
+Epoch [5/10], Train Loss: 0.0469, Val Loss: 0.1934, Val Acc: 93.01%
+Epoch 6/10, Batch 0/131, Loss: 0.1601
+Epoch 6/10, Batch 50/131, Loss: 0.0957
+Epoch 6/10, Batch 100/131, Loss: 0.0074
+Epoch [6/10], Train Loss: 0.0417, Val Loss: 0.0685, Val Acc: 97.13%
+Epoch 7/10, Batch 0/131, Loss: 0.0066
+Epoch 7/10, Batch 50/131, Loss: 0.0021
+Epoch 7/10, Batch 100/131, Loss: 0.0003
+Epoch [7/10], Train Loss: 0.0226, Val Loss: 0.0371, Val Acc: 98.85%
+New best model saved with accuracy: 98.85%
+Epoch 8/10, Batch 0/131, Loss: 0.0005
+Epoch 8/10, Batch 50/131, Loss: 0.0007
+Epoch 8/10, Batch 100/131, Loss: 0.0105
+Epoch [8/10], Train Loss: 0.0168, Val Loss: 0.0262, Val Acc: 98.95%
+New best model saved with accuracy: 98.95%
+Epoch 9/10, Batch 0/131, Loss: 0.0545
+Epoch 9/10, Batch 50/131, Loss: 0.0001
+Epoch 9/10, Batch 100/131, Loss: 0.0004
+Epoch [9/10], Train Loss: 0.0144, Val Loss: 0.0716, Val Acc: 97.99%
+Epoch 10/10, Batch 0/131, Loss: 0.0806
+Epoch 10/10, Batch 50/131, Loss: 0.0154
+Epoch 10/10, Batch 100/131, Loss: 0.0085
+Epoch [10/10], Train Loss: 0.0240, Val Loss: 0.0677, Val Acc: 97.70%
+Evaluating model on test set...
+
+Classification Report:
+              precision    recall  f1-score   support
+
+      NORMAL     0.9889    0.3803    0.5494       234
+   PNEUMONIA     0.7285    0.9974    0.8420       390
+
+    accuracy                         0.7660       624
+   macro avg     0.8587    0.6889    0.6957       624
+weighted avg     0.8261    0.7660    0.7323       624
+
+Detailed Metrics:
+Test Loss: 1.310825
+Accuracy: 0.766026 (76.6026%)
+Precision: 0.826124
+Recall: 0.766026
+F1-Score: 0.732263
+
+Class-wise Metrics:
+True Positives (TP): 389
+True Negatives (TN): 89
+False Positives (FP): 145
+False Negatives (FN): 1
+Sensitivity (Recall for Pneumonia): 0.997436
+Specificity (Recall for Normal): 0.380342
+Model saved as 'pneumonia_detection_model_complete.pth'
+
+==================================================
+COMPREHENSIVE RESULTS SUMMARY
+==================================================
+   Metric    Value Percentage
+Test Loss 1.310825          -
+ Accuracy 0.766026   76.6026%
+Precision 0.826124   82.6124%
+   Recall 0.766026   76.6026%
+ F1-Score 0.732263   73.2263%
+
+Additional Metrics:
+         Metric  Value
+ True Positives    389
+ True Negatives     89
+False Positives    145
+False Negatives      1
+    Sensitivity 0.9974
+    Specificity 0.3803
+  Total Samples    624
